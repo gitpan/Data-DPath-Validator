@@ -11,7 +11,7 @@ WriteMakefile(
   NAME      => 'Data::DPath::Validator',
   AUTHOR    => "Nicholas\ Perez\ \<nperez\@cpan\.org\>",
   ABSTRACT  => "Validate\ data\ based\ on\ Perl\ data\ structure\ templates",
-  VERSION   => '0.093410',
+  VERSION   => '0.093411',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

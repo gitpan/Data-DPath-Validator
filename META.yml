@@ -23,4 +23,4 @@ requires:
   namespace::autoclean: 0.09
 resources:
   repository: git://github.com/nperez/data-dpath-validator.git
-version: 0.093410
+version: 0.093411

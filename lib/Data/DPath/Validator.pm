@@ -1,5 +1,5 @@
 package Data::DPath::Validator;
-our $VERSION = '0.093410';
+our $VERSION = '0.093411';
 
 #ABSTRACT: Validate data based on template data
 
@@ -94,7 +94,7 @@ Data::DPath::Validator - Validate data based on template data
 
 =head1 VERSION
 
-version 0.093410
+version 0.093411
 
 =head1 SYNOPSIS
 

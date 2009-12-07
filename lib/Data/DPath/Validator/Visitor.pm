@@ -1,5 +1,5 @@
 package Data::DPath::Validator::Visitor;
-our $VERSION = '0.093410';
+our $VERSION = '0.093411';
 
 #ABSTRACT: Data::Visitor subclass for generating DPaths
 
@@ -139,6 +139,23 @@ sub visit_value
     }
     else
     {
+        if($self->structure_depth == 0)
+        {
+            $self->dive();
+            $self->append_text('.[ value ');
+            if(Scalar::Util::looks_like_number($val))
+            {
+                $self->append_text("== $val");
+            }
+            else
+            {
+                $self->append_text("eq '$val'");
+            }
+            $self->append_text(']');
+            $self->add_template($self->current_template);
+            $self->rise();
+            return;
+        }
         $self->append_text('.[ value ');
     }
 
@@ -250,7 +267,7 @@ Data::DPath::Validator::Visitor - Data::Visitor subclass for generating DPaths
 
 =head1 VERSION
 
-version 0.093410
+version 0.093411
 
 =head1 SYNOPSIS
 
